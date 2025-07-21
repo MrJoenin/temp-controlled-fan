@@ -1,0 +1,461 @@
+(edif "Smart Temperature controlled Fan circuit"
+    (edifVersion 2 0 0)
+    (edifLevel 0)
+    (keywordMap (keywordLevel 0))
+    (status
+        (written
+            (timestamp 2025 07 21 22 32 15.021)
+            (program "Flux" (version "1.0"))
+            (author "Flux")
+        )
+    )
+    (library FluxLibrary
+        (edifLevel 0)
+        (technology (numberDefinition))
+        (cell "Generic Resistor"
+            (cellType generic)
+            (view schematic
+                (viewType schematic)
+                (interface
+                    (port P2 (direction inout))
+                (port P1 (direction inout))
+                )
+            )
+        )
+        (cell "Power Net Portal"
+            (cellType generic)
+            (view schematic
+                (viewType schematic)
+                (interface
+                    (port P1 (direction inout))
+                )
+            )
+        )
+        (cell Ground
+            (cellType generic)
+            (view schematic
+                (viewType schematic)
+                (interface
+                    (port GND (direction inout))
+                )
+            )
+        )
+        (cell BC547CTA
+            (cellType generic)
+            (view schematic
+                (viewType schematic)
+                (interface
+                    (port B (direction inout))
+                (port C (direction inout))
+                (port E (direction inout))
+                )
+            )
+        )
+        (cell "Zener Diode"
+            (cellType generic)
+            (view schematic
+                (viewType schematic)
+                (interface
+                    (port A (direction inout))
+                (port K (direction inout))
+                )
+            )
+        )
+        (cell "LTL-307E"
+            (cellType generic)
+            (view schematic
+                (viewType schematic)
+                (interface
+                    (port K (direction inout))
+                (port A (direction inout))
+                )
+            )
+        )
+        (cell TMP36GT9Z
+            (cellType generic)
+            (view schematic
+                (viewType schematic)
+                (interface
+                    (port "+VS" (direction inout))
+                (port GND (direction inout))
+                (port VOUT (direction inout))
+                )
+            )
+        )
+        (cell "Net Portal"
+            (cellType generic)
+            (view schematic
+                (viewType schematic)
+                (interface
+                    (port P1 (direction inout))
+                )
+            )
+        )
+        (cell "DC Motor"
+            (cellType generic)
+            (view schematic
+                (viewType schematic)
+                (interface
+                    (port "-" (direction inout))
+                (port "+" (direction inout))
+                )
+            )
+        )
+        (cell "17 mm Rotary Potentiometer"
+            (cellType generic)
+            (view schematic
+                (viewType schematic)
+                (interface
+                    (port WIPER (direction inout))
+                (port CCW (direction inout))
+                (port CW (direction inout))
+                )
+            )
+        )
+        (cell "LM393N/NOPB"
+            (cellType generic)
+            (view schematic
+                (viewType schematic)
+                (interface
+                    (port "2IN-" (direction inout))
+                (port GND (direction inout))
+                (port "1IN+" (direction inout))
+                (port 1OUT (direction inout))
+                (port 2OUT (direction inout))
+                (port "1IN-" (direction inout))
+                (port "2IN+" (direction inout))
+                (port VCC (direction inout))
+                )
+            )
+        )
+        (cell KPEG242
+            (cellType generic)
+            (view schematic
+                (viewType schematic)
+                (interface
+                    (port "03cd4192-85bf-4e1c-b460-92296fe16e76" (direction inout))
+                (port 2 (direction inout))
+                )
+            )
+        )
+        (cell "SWITCH-PUSH-6mm-H5mm-4pin"
+            (cellType generic)
+            (view schematic
+                (viewType schematic)
+                (interface
+                    (port "1-1" (direction inout))
+                (port "1-2" (direction inout))
+                (port "2-2" (direction inout))
+                (port "2-1" (direction inout))
+                )
+            )
+        )
+        (cell "Connector 01x04 0.100"
+            (cellType generic)
+            (view schematic
+                (viewType schematic)
+                (interface
+                    (port 3 (direction inout))
+                (port 1 (direction inout))
+                (port 4 (direction inout))
+                (port 2 (direction inout))
+                )
+            )
+        )
+        (cell "N-Channel MOSFET"
+            (cellType generic)
+            (view schematic
+                (viewType schematic)
+                (interface
+                    (port GATE (direction inout))
+                (port DRAIN (direction inout))
+                (port SOURCE (direction inout))
+                )
+            )
+        )
+    )
+    
+    (library Main
+            (edifLevel 0)
+            (technology (numberDefinition))
+            (cell "Smart Temperature controlled Fan circuit_top"
+                (cellType generic)
+                (view schematic
+                    (viewType schematic)
+                    (interface)
+                    (contents
+                        (instance R2
+                (viewRef schematic (cellRef "Generic Resistor" (libraryRef FluxLibrary)))
+            )
+                        (instance R8
+                (viewRef schematic (cellRef "Generic Resistor" (libraryRef FluxLibrary)))
+            )
+                        (instance "VIN(5V)"
+                (viewRef schematic (cellRef "Power Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance "1430c6cd-3333-4670-a40d-07873f5b79e2"
+                (viewRef schematic (cellRef Ground (libraryRef FluxLibrary)))
+            )
+                        (instance Q2
+                (viewRef schematic (cellRef BC547CTA (libraryRef FluxLibrary)))
+            )
+                        (instance "D2 (Zener Diode)"
+                (viewRef schematic (cellRef "Zener Diode" (libraryRef FluxLibrary)))
+            )
+                        (instance LED2
+                (viewRef schematic (cellRef "LTL-307E" (libraryRef FluxLibrary)))
+            )
+                        (instance tmp36
+                (viewRef schematic (cellRef TMP36GT9Z (libraryRef FluxLibrary)))
+            )
+                        (instance tmp_out
+                (viewRef schematic (cellRef "Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance pot_out
+                (viewRef schematic (cellRef "Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance M1
+                (viewRef schematic (cellRef "DC Motor" (libraryRef FluxLibrary)))
+            )
+                        (instance "VR1 (potentiometer)"
+                (viewRef schematic (cellRef "17 mm Rotary Potentiometer" (libraryRef FluxLibrary)))
+            )
+                        (instance motor
+                (viewRef schematic (cellRef "Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance tmp_out
+                (viewRef schematic (cellRef "Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance R3
+                (viewRef schematic (cellRef "Generic Resistor" (libraryRef FluxLibrary)))
+            )
+                        (instance R6
+                (viewRef schematic (cellRef "Generic Resistor" (libraryRef FluxLibrary)))
+            )
+                        (instance "VIN(5V)"
+                (viewRef schematic (cellRef "Power Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance "VIN(5V)"
+                (viewRef schematic (cellRef "Power Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance U1
+                (viewRef schematic (cellRef "LM393N/NOPB" (libraryRef FluxLibrary)))
+            )
+                        (instance tmp_out
+                (viewRef schematic (cellRef "Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance R1
+                (viewRef schematic (cellRef "Generic Resistor" (libraryRef FluxLibrary)))
+            )
+                        (instance "VIN(5V)"
+                (viewRef schematic (cellRef "Power Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance LS1
+                (viewRef schematic (cellRef KPEG242 (libraryRef FluxLibrary)))
+            )
+                        (instance "6f2ed4e4-9c25-4a59-853e-bebf7db99718"
+                (viewRef schematic (cellRef Ground (libraryRef FluxLibrary)))
+            )
+                        (instance "7a9d6cb4-cb6a-4c71-81c0-7f72a53be409"
+                (viewRef schematic (cellRef Ground (libraryRef FluxLibrary)))
+            )
+                        (instance buzzer
+                (viewRef schematic (cellRef "Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance SW2
+                (viewRef schematic (cellRef "SWITCH-PUSH-6mm-H5mm-4pin" (libraryRef FluxLibrary)))
+            )
+                        (instance "82bc6554-ba36-4635-865e-ec6c8019469e"
+                (viewRef schematic (cellRef Ground (libraryRef FluxLibrary)))
+            )
+                        (instance R7
+                (viewRef schematic (cellRef "Generic Resistor" (libraryRef FluxLibrary)))
+            )
+                        (instance "VIN(5V)"
+                (viewRef schematic (cellRef "Power Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance "99bfb412-5de8-4842-a30d-b9a53a92887b"
+                (viewRef schematic (cellRef Ground (libraryRef FluxLibrary)))
+            )
+                        (instance "9acca5fe-5da2-42a5-8ecd-b4b98531e6ea"
+                (viewRef schematic (cellRef Ground (libraryRef FluxLibrary)))
+            )
+                        (instance motor
+                (viewRef schematic (cellRef "Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance R4
+                (viewRef schematic (cellRef "Generic Resistor" (libraryRef FluxLibrary)))
+            )
+                        (instance "VIN(5V)"
+                (viewRef schematic (cellRef "Power Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance tmp_out
+                (viewRef schematic (cellRef "Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance vdr_out
+                (viewRef schematic (cellRef "Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance J3
+                (viewRef schematic (cellRef "Connector 01x04 0.100" (libraryRef FluxLibrary)))
+            )
+                        (instance "b33300bb-b713-4feb-8c0c-5548e86a81be"
+                (viewRef schematic (cellRef Ground (libraryRef FluxLibrary)))
+            )
+                        (instance "VIN(5V)"
+                (viewRef schematic (cellRef "Power Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance vdr_out
+                (viewRef schematic (cellRef "Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance "VIN(5V)"
+                (viewRef schematic (cellRef "Power Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance pot_out
+                (viewRef schematic (cellRef "Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance motor
+                (viewRef schematic (cellRef "Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance Q1
+                (viewRef schematic (cellRef "N-Channel MOSFET" (libraryRef FluxLibrary)))
+            )
+                        (instance pot_out
+                (viewRef schematic (cellRef "Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance "VIN(5V)"
+                (viewRef schematic (cellRef "Power Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance "VIN(5v)"
+                (viewRef schematic (cellRef "Power Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance buzzer
+                (viewRef schematic (cellRef "Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance "ef6b360c-0f45-4aa0-bb5c-db1cdea26976"
+                (viewRef schematic (cellRef Ground (libraryRef FluxLibrary)))
+            )
+                        (instance "VIN(5V)"
+                (viewRef schematic (cellRef "Power Net Portal" (libraryRef FluxLibrary)))
+            )
+                        (instance R5
+                (viewRef schematic (cellRef "Generic Resistor" (libraryRef FluxLibrary)))
+            )
+                        (Net "Net 4"
+                            (joined (portRef "+VS" (instanceRef tmp36))
+                            (portRef P1 (instanceRef R3)))
+                        )
+                        (Net "Net 2"
+                            (joined (portRef P1 (instanceRef "VIN(5V)"))
+                            (portRef C (instanceRef Q2))
+                            (portRef "+" (instanceRef M1))
+                            (portRef P2 (instanceRef R3))
+                            (portRef P2 (instanceRef R6))
+                            (portRef P1 (instanceRef "VIN(5V)"))
+                            (portRef P1 (instanceRef "VIN(5V)"))
+                            (portRef VCC (instanceRef U1))
+                            (portRef P2 (instanceRef R1))
+                            (portRef P1 (instanceRef "VIN(5V)"))
+                            (portRef "1-1" (instanceRef SW2))
+                            (portRef P2 (instanceRef R7))
+                            (portRef P1 (instanceRef "VIN(5V)"))
+                            (portRef P1 (instanceRef "VIN(5V)"))
+                            (portRef 4 (instanceRef J3))
+                            (portRef P1 (instanceRef "VIN(5V)"))
+                            (portRef P1 (instanceRef "VIN(5V)"))
+                            (portRef P1 (instanceRef "VIN(5V)"))
+                            (portRef P1 (instanceRef "VIN(5V)"))
+                            (portRef P2 (instanceRef R5)))
+                        )
+                        (Net "Net 5"
+                            (joined (portRef P1 (instanceRef motor))
+                            (portRef 1OUT (instanceRef U1))
+                            (portRef "2-2" (instanceRef SW2))
+                            (portRef P1 (instanceRef motor))
+                            (portRef P1 (instanceRef motor))
+                            (portRef GATE (instanceRef Q1))
+                            (portRef P1 (instanceRef R5)))
+                        )
+                        (Net "Net 7"
+                            (joined (portRef WIPER (instanceRef "VR1 (potentiometer)"))
+                            (portRef P2 (instanceRef R4)))
+                        )
+                        (Net "Net 1"
+                            (joined (portRef K (instanceRef "D2 (Zener Diode)"))
+                            (portRef P1 (instanceRef pot_out))
+                            (portRef "2IN-" (instanceRef U1))
+                            (portRef P1 (instanceRef R4))
+                            (portRef 1 (instanceRef J3))
+                            (portRef P1 (instanceRef pot_out))
+                            (portRef P1 (instanceRef pot_out)))
+                        )
+                        (Net "Net 8"
+                            (joined (portRef A (instanceRef LED2))
+                            (portRef P1 (instanceRef R7)))
+                        )
+                        (Net "Net 9"
+                            (joined (portRef P1 (instanceRef R8))
+                            (portRef P1 (instanceRef R6))
+                            (portRef 2OUT (instanceRef U1))
+                            (portRef P1 (instanceRef buzzer))
+                            (portRef P1 (instanceRef buzzer)))
+                        )
+                        (Net "Net 6"
+                            (joined (portRef CCW (instanceRef "VR1 (potentiometer)"))
+                            (portRef P1 (instanceRef "VIN(5v)")))
+                        )
+                        (Net "Net 3"
+                            (joined (portRef P2 (instanceRef R2))
+                            (portRef "1IN-" (instanceRef U1))
+                            (portRef P1 (instanceRef R1))
+                            (portRef P1 (instanceRef vdr_out))
+                            (portRef P1 (instanceRef vdr_out)))
+                        )
+                        (Net "Net 13"
+                            (joined (portRef VOUT (instanceRef tmp36))
+                            (portRef P1 (instanceRef tmp_out))
+                            (portRef P1 (instanceRef tmp_out))
+                            (portRef "1IN+" (instanceRef U1))
+                            (portRef "2IN+" (instanceRef U1))
+                            (portRef P1 (instanceRef tmp_out))
+                            (portRef P1 (instanceRef tmp_out))
+                            (portRef 2 (instanceRef J3)))
+                        )
+                        (Net GND
+                            (joined (portRef P1 (instanceRef R2))
+                            (portRef GND (instanceRef "1430c6cd-3333-4670-a40d-07873f5b79e2"))
+                            (portRef A (instanceRef "D2 (Zener Diode)"))
+                            (portRef GND (instanceRef tmp36))
+                            (portRef CW (instanceRef "VR1 (potentiometer)"))
+                            (portRef GND (instanceRef U1))
+                            (portRef "03cd4192-85bf-4e1c-b460-92296fe16e76" (instanceRef LS1))
+                            (portRef GND (instanceRef "6f2ed4e4-9c25-4a59-853e-bebf7db99718"))
+                            (portRef GND (instanceRef "7a9d6cb4-cb6a-4c71-81c0-7f72a53be409"))
+                            (portRef GND (instanceRef "82bc6554-ba36-4635-865e-ec6c8019469e"))
+                            (portRef GND (instanceRef "99bfb412-5de8-4842-a30d-b9a53a92887b"))
+                            (portRef GND (instanceRef "9acca5fe-5da2-42a5-8ecd-b4b98531e6ea"))
+                            (portRef 3 (instanceRef J3))
+                            (portRef GND (instanceRef "b33300bb-b713-4feb-8c0c-5548e86a81be"))
+                            (portRef SOURCE (instanceRef Q1))
+                            (portRef GND (instanceRef "ef6b360c-0f45-4aa0-bb5c-db1cdea26976")))
+                        )
+                        (Net "Net 12"
+                            (joined (portRef E (instanceRef Q2))
+                            (portRef 2 (instanceRef LS1)))
+                        )
+                        (Net "Net 10"
+                            (joined (portRef K (instanceRef LED2))
+                            (portRef "-" (instanceRef M1))
+                            (portRef DRAIN (instanceRef Q1)))
+                        )
+                        (Net "Net 11"
+                            (joined (portRef P2 (instanceRef R8))
+                            (portRef B (instanceRef Q2)))
+                        )
+                    )
+                )
+            )
+        )
+        (design "Smart Temperature controlled Fan circuit"
+            (cellRef "Smart Temperature controlled Fan circuit_top" (libraryRef Main))
+        )
+)
