@@ -1,5 +1,4 @@
 # temp-controlled-fan
-Analogue Circuit that instruct a DC motor fan to turn on base on the temperature reading from the tmp36. A buzzer is included to indicate temperature threshold limit exceeded.
 
 ## Overview
 This circuit uses lm393 to compare voltages between the threshold and the tmp36. If the tmp36 exceeds the threshold temperature set by the user, a signal is sent to the nmosfet to activate and LED is turned on indicate the dc motor is moving. The lm393 activates a buzzer when tmp36 temperature exceeds its maximum temperature. 
