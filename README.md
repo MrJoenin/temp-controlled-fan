@@ -22,6 +22,7 @@ This circuit uses lm393 to compare voltages between the threshold and the tmp36.
 - `arm_control.ino` – Arduino sketch
 - `solidworks/` – CAD files
 - `images/` – Build photos
+- 
 
 ## Author
 John Yalley – ECET student at NJIT
