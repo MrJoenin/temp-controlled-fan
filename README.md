@@ -23,6 +23,7 @@ This circuit uses the LM393 comparator to compare the voltage from a TMP36 tempe
 
 ## Files
 - `circuit photos` – circuit diagrams
+- 'PCB files' - Gerber files, BOM etc.
 
 ## Link
 - https://www.tinkercad.com/things/4xYCQ1ZHnzD-smart-temperature-controlled-fan-system
