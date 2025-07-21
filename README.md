@@ -19,5 +19,9 @@ This circuit uses lm393 to compare voltages between the threshold and the tmp36.
 ## Files
 - `circuit photos` – circuit diagram
 
+##Link
+- https://www.tinkercad.com/things/4xYCQ1ZHnzD-smart-temperature-controlled-fan-system
+  
+
 ## Author
 John Yalley – ECET student at NJIT
