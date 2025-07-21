@@ -1,7 +1,7 @@
 # temp-controlled-fan
 
 ## Overview
-This circuit uses lm393 to compare voltages between the threshold and the tmp36. If the tmp36 exceeds the threshold temperature set by the user, a signal is sent to the nmosfet to activate and LED is turned on indicate the dc motor is moving. The lm393 activates a buzzer when tmp36 temperature exceeds its maximum temperature. 
+This circuit uses the LM393 comparator to compare the voltage from a TMP36 temperature sensor with a user-defined threshold. When the temperature measured by the TMP36 exceeds the set threshold, a signal is sent to the NMOSFET, activating it, which in turn turns on an LED to indicate that the DC motor is running. Additionally, the LM393 will activate a buzzer if the TMP36 detects a temperature that exceeds its maximum limit. 
 
 ## Features
 - Duel Comparator (lm393) x1
