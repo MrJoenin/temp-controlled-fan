@@ -16,12 +16,13 @@ This circuit uses lm393 to compare voltages between the threshold and the tmp36.
 - NPN transistor x1
 - Switch button x1
 
+## Software Used
+- Flux AI PCB
+- Multisim
+- ThinkerCAD
+
 ## Files
-- `circuit photos` – circuit diagram
+- `circuit photos` – circuit diagrams
 
 ## Link
 - https://www.tinkercad.com/things/4xYCQ1ZHnzD-smart-temperature-controlled-fan-system
-  
-
-## Author
-John Yalley – ECET student at NJIT
