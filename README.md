@@ -17,7 +17,7 @@ This circuit uses the LM393 comparator to compare the voltage from a TMP36 tempe
 - Switch button x1
 
 ## Software Used
-- Flux AI PCB
+- KICAD
 - Multisim
 - ThinkerCAD
 
