@@ -1,0 +1,25 @@
+### Footprint positions - created on 2025-12-24T19:35:12-0500 ###
+### Printed by KiCad version 9.0.6
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val                 Package                                                              PosX       PosY       Rot  Side
+BZ1       Buzzer              MagneticBuzzer_StarMicronics_TMB                                 146.7000   -71.2750    0.0000  top
+D1        D_Zener             D_A-405_P7.62mm_Horizontal                                       158.8800   -82.4000    0.0000  top
+D2        LED                 LED_D4.0mm                                                       126.4650   -96.8000    0.0000  top
+J1        Conn_01x04_Pin      PinSocket_1x04_P2.54mm_Vertical                                  172.8000   -79.5800    0.0000  top
+M1        Motor_DC            TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal    170.1100  -101.3450   90.0000  top
+Q1        NMOS                TO-92S                                                           156.4600   -87.9000    0.0000  top
+Q2        NPN                 TO-92_Inline_Wide                                                152.8000   -98.1000  180.0000  top
+Q3        NPN                 TO-92_Inline_W4.0mm_Horizontal_FlatSideDown                      145.9475  -111.9300    0.0000  top
+R1        R_US                R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal                 135.5900   -75.8000    0.0000  top
+R2        R_US                R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal                 143.2100   -79.8714  180.0000  top
+R3        1k                  R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal                 135.5900   -83.9429    0.0000  top
+R4        1k                  R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal                 143.2100   -88.0143  180.0000  top
+R5        R_US                R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal                 135.5900   -92.0857    0.0000  top
+R6        R_US                R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal                 135.5900   -96.1571    0.0000  top
+R7        10k                 R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal                 135.5900  -100.2286    0.0000  top
+R8        R_US                R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal                 135.5900  -104.3000    0.0000  top
+RV1       R_Potentiometer_US  Potentiometer_Bourns_3339P_Vertical_HandSoldering                129.1250   -84.6250    0.0000  top
+SW1       SW_SPDT             SW_DIP_SPSTx01_Slide_6.7x4.1mm_W6.73mm_P2.54mm_LowProfile_JPin   161.2000   -69.7250   90.0000  top
+U2        LM393               SOIC-8_3.9x4.9mm_P1.27mm                                         150.2500   -89.0000    0.0000  top
+## End
