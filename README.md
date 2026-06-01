@@ -12,7 +12,6 @@ This circuit uses the LM393 comparator to compare the voltage from an NTC thermi
 - N Mosfet x1
 - Resistors x8
 - Potentiometer x1
-- NPN transistor x1
 
 ## Software Used
 - KICAD
